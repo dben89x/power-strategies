@@ -1,10 +1,24 @@
 !!!
 %html
   %head
+    %title Power Strategies
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title PowerStrategies
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta{name: 'description', content: 'Power Strategies, Technology Implementation, Gaming, Casino, Consulting, Planning, Slot, Operations, Systems, Professional Services.'}
+    %meta{name: "robots", content:"index,follow"}
+    %link{rel: :stylesheet, type: 'text/css', href: "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"}
+
+    %link{:charset => "UTF-8", :href => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css", :rel => "stylesheet", :type => "text/css"}/
+
+
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application'
   %body
-    = yield
+    =react_component 'NavBar', props: {navClass: current_page?(root_path) ? 'navbar-transparent' : 'navbar-opaque'}, prerender: false
+    .application-container
+      = yield
+    =render 'layouts/footer'
