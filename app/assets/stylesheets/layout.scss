@@ -1,0 +1,86 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: white;
+  font-family: Roboto, sans-serif, Verdana, Geneva, sans-serif;
+  @media screen and (min-width: #{$desktop_large_width}) and (max-width: #{$desktop_xl_width}) {
+    font-size: 37px;
+  }
+  @media screen and (min-width: #{$desktop_common_width}) and (max-width: #{$desktop_large_width}) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: #{$desktop_small_width}) and (max-width: #{$desktop_common_width}) {
+    font-size: 23px;
+  }
+  @media screen and (min-width: #{$tablet_horizontal_width}) and (max-width: #{$desktop_small_width}) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: #{$tablet_vertical_width}) and (max-width: #{$tablet_horizontal_width}) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: #{$mobile_large_width}) and (max-width: #{$tablet_vertical_width}) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: #{$mobile_common_width}) and (max-width: #{$mobile_large_width}) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: #{$mobile_small_width}) and (max-width: #{$mobile_large_width}) {
+    font-size: 14px;
+  }
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0 0 6em !important;
+  @media #{$mobile_large_landscape} {
+    margin: 0 0 15em !important;
+  }
+  @media #{$mobile_common} {
+    margin: 0 0 20em !important;
+  }
+}
+
+.banner {
+  height: calc(100vh - 6em);
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  @media #{$tablet_horizontal} {
+    height: 100%;
+  }
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 5em;
+  margin: 0 0 1em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+}
+
+h2 {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.smooth-font {
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}

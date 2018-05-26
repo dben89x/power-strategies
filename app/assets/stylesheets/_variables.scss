@@ -1,0 +1,52 @@
+// Breakpoints
+$mobile_common_width: 375px;
+$mobile_iphone_width: 375px;
+$mobile_small_width: 320px;
+$galaxy_width: 360px;
+$mobile_large_width: 480px;
+$mobile_large_landscape_width: 812px;
+$desktop_common_width: 1920px;
+$desktop_small_width: 1440px;
+$desktop_large_width: 2560px;
+$desktop_xl_width: 3840px;
+$tablet_vertical_width: 768px;
+$tablet_horizontal_width: 1280px;
+$tablet_horizontal_small_width: 1024px;
+
+// Media queries
+$mobile_common: "only screen and (max-width: #{$mobile_common_width})";
+$mobile_iphone: "only screen and (max-width: #{$mobile_iphone_width})";
+$mobile_small: "only screen and (max-width: #{$mobile_small_width})";
+$galaxy: "only screen and (max-width: #{$galaxy_width})";
+$mobile_large: "only screen and (max-width: #{$mobile_large_width})";
+$mobile_large_landscape: "only screen and (max-width: #{$mobile_large_landscape_width})";
+$desktop_common: "only screen and (max-width: #{$desktop_common_width})";
+$desktop_small: "only screen and (max-width: #{$desktop_small_width})";
+$desktop_large: "only screen and (max-width: #{$desktop_large_width})";
+$desktop_xl: "only screen and (max-width: #{$desktop_xl_width})";
+$tablet_vertical: "only screen and (max-width: #{$tablet_vertical_width})";
+$tablet_horizontal: "only screen and (max-width: #{$tablet_horizontal_width})";
+$tablet_horizontal_small: "only screen and (max-width: #{$tablet_horizontal_small_width})";
+
+// Colors
+$body_color: rgb(248, 248, 248);
+$light_body_color: rgb(244, 244, 244);
+$home_blue: rgb(42, 124, 222);
+$action_btn_color: rgb(42, 124, 222);
+$nav_backdrop_color: rgb(12, 13, 13);
+$black: rgb(42, 44, 46);
+$black_background: rgb(35,35,35);
+$success_green: rgb(78, 163, 22);
+$normal_font_size: 1em;
+$carousel_btn_color: rgb(177, 178, 180);
+$carousel_black: rgb(18, 18, 18);
+$green: rgb(132, 199, 204);
+$darkBrand: rgb(182, 63, 77);
+// $lightBrand: rgb(230, 73, 92);
+$lightBrand: rgb(237, 72, 81);
+$lightBrandAlpha1: rgba(237, 72, 81, 0.8);
+$lightBrandAlpha2: rgba(237, 72, 81, 0.4);
+$grey: rgb(104, 104, 104);
+$form_grey: rgb(250, 250, 250);
+$form_grey_outline: rgb(221, 221, 221);
+$light_grey: rgb(189, 189, 189);

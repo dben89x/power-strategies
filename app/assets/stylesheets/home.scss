@@ -1,0 +1,148 @@
+@import 'variables';
+
+#home {
+  display: block;
+  width: 100%;
+
+  #hero-banner {
+    background: $lightBrand;
+    height: 100vh !important;
+    // perspective: 1px;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    // perspective-origin: 0 0;
+    // perspective: 300px;
+    // .banner-container {
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    transform-style: preserve-3d;
+    padding: 10em 0;
+
+    hgroup {
+      // transform-origin: 0 0;
+      // transform: translateZ(-300px) scale(2);
+      h1,
+      h2 {
+        opacity: 0;
+      }
+
+      h1 {
+        letter-spacing: 5px;
+        font-size: 12em;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-top: 20px;
+        @media #{$mobile_large} {
+          font-size: 10em;
+        }
+        @media #{$mobile_common} {
+          font-size: 7em;
+        }
+      }
+
+      h2 {
+        font-size: 1.7em;
+        font-family: 'RobotoLight';
+        margin: 0;
+        margin-top: 40px;
+        @media #{$mobile_large} {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .planes {
+      img {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+      }
+
+      img.main-plane {
+        width: 50%;
+        left: 40%;
+      }
+
+      img.plane-img {
+        // transform: translateY(100%);
+      }
+    }
+    // }
+  }
+
+  #archive {
+    background: $black;
+  }
+
+  #company-profile {
+    display: inline-block;
+
+    .left,
+    .right {
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      float: left;
+      box-sizing: border-box;
+      @media #{$tablet_vertical} {
+        width: 100%;
+      }
+    }
+
+    .left {
+      background: $lightBrand;
+      flex-direction: column;
+      justify-content: center;
+      display: inline-flex;
+
+      img {
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
+
+    .right {
+      text-align: center;
+      padding: 5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+
+      .wrapper {
+        h1 {
+          letter-spacing: 3px;
+          margin: 0;
+          color: $grey;
+          margin-bottom: 1em;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.2em;
+          color: $grey;
+          line-height: 1.5;
+          font-weight: 200;
+
+          .p-bold {
+            font-weight: 600;
+            color: $lightBrand;
+          }
+        }
+      }
+      @media #{$tablet_vertical} {
+        padding: 5em 3em;
+      }
+      @media #{$mobile_large} {
+        padding: 5em 2em;
+      }
+    }
+  }
+
+  #market {
+    background: $grey;
+  }
+
+  }
