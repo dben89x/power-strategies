@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Template extends React.Component {
+export default class ContactForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -10,7 +10,7 @@ export default class Template extends React.Component {
   render() {
 
     return (
-
+      <div id='contact-form'></div>
     )
   }
 }

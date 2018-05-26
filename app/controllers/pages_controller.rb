@@ -5,25 +5,25 @@ class PagesController < ApplicationController
       slug: 1,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/gambling.jpg'
+      url: 'assets/stock/gambling.jpg'
     },{
       id: 2,
       slug: 2,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/gambling.jpg'
+      url: 'assets/stock/gambling.jpg'
     },{
       id: 3,
       slug: 3,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/gambling.jpg'
+      url: 'assets/stock/gambling.jpg'
     },{
       id: 4,
       slug: 4,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/gambling.jpg'
+      url: 'assets/stock/gambling.jpg'
     }]
   end
 

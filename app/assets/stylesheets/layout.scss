@@ -5,7 +5,7 @@
 }
 body {
   margin: 0;
-  background: white;
+  background: $lightBody;
   font-family: Roboto, sans-serif, Verdana, Geneva, sans-serif;
   @media screen and (min-width: #{$desktop_large_width}) and (max-width: #{$desktop_xl_width}) {
     font-size: 37px;
@@ -49,7 +49,6 @@ body {
 }
 
 .banner {
-  height: calc(100vh - 6em);
   width: 100%;
   box-sizing: border-box;
   float: left;
@@ -58,21 +57,37 @@ body {
     height: 100%;
   }
 }
-
+h1, h2, p {
+  color: $black
+}
 h1 {
   letter-spacing: 3px;
   font-weight: 100;
   font-size: 5em;
-  margin: 0 0 1em;
+  margin: 0 0 0.5em;
   line-height: 1;
   text-transform: uppercase;
-  color: white;
 }
 
 h2 {
-  color: white;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.action-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 0.5em;
+  padding: 2em 6em;
+  border-radius: 4em;
+  font-weight: 100;
+  transition: 0.3s;
+  text-transform: uppercase;
+
+  &.brand-btn {
+    background: $lightBrand;
+  }
 }
 
 .smooth-font {

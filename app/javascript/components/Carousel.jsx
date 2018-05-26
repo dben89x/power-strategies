@@ -1,8 +1,5 @@
 import React from 'react'
-import $ from 'jquery'
 import Slider from 'react-slick'
-
-const $window = $(window)
 
 export default class Home extends React.Component {
   constructor(props) {

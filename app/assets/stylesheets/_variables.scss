@@ -29,10 +29,12 @@ $tablet_horizontal: "only screen and (max-width: #{$tablet_horizontal_width})";
 $tablet_horizontal_small: "only screen and (max-width: #{$tablet_horizontal_small_width})";
 
 // Colors
-$body_color: rgb(255, 255, 255);
-$light_body_color: rgb(244, 244, 244);
+$lightBody: rgb(248, 248, 248);
 $lightBrand: rgb(211, 91, 81);
-$lightBrandAlpha1: rgba(211, 91, 81, 0.8);
+$lightBrandAlpha1: rgba(211, 91, 81, 0.85);
 $lightBrandAlpha2: rgba(211, 91, 81, 0.4);
+$lightBrandAlpha3: rgba(211, 91, 81, 0.95);
+$lightBrandAlpha4: rgba(211, 91, 81, 0.2);
 $grey: rgb(104, 104, 104);
 $black: rgb(42, 44, 46);
+$lightGrey: rgb(232, 232, 232);
