@@ -3,12 +3,11 @@
 nav {
   width: 100%;
   position: fixed;
-  height: 6em;
   overflow: hidden;
   background: none;
   z-index: 4;
   // background: linear-gradient($lightBrandAlpha1, $lightBrandAlpha2);
-  background: $lightBrand;
+  background: white;
 
   .navbar-header {
     display: none;
@@ -49,29 +48,47 @@ nav {
     text-decoration: none;
     list-style: none;
     padding: 0 10em;
-    display: inline-flex;
-    flex-direction: row;
-    vertical-align: middle;
     width: 100%;
-    box-sizing: border-box;
-    justify-content: space-around;
-    align-items: center;
+    display: inline-block;
 
     @media #{$tablet_vertical} {
       display: none;
     }
-
+    .left, .right, .middle {
+      display: inline-flex;
+      flex-direction: row;
+      vertical-align: middle;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .left, .right {
+      width: 45%;
+      padding: 0 1em;
+    }
+    .left {
+      justify-content: flex-end;
+    }
+    .right {
+      justify-content: flex-start;
+    }
+    .middle {
+      width: 10%;
+    }
     a {
-      color: white;
+      color: $black;
       display: inline-block;
       margin: 1.5em;
       font-weight: 100;
       text-transform: uppercase;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 0.8em;
 
       &.logo img {
         width: 3em;
+      }
+      &.logo {
+        font-size: 2em;
+        margin: 0.5em;
       }
     }
   }

@@ -56,9 +56,8 @@ export default class NavBar extends React.Component {
       </div>
       <nav className={`navbar navbar-fixed-top ${this.state.navClass}`}>
         <div className="navbar-header">
-          <a href="#brand-activate" className="navbar-toggle navbar-brand" onClick={this.goToAnchor}>
-            {/* <img src="assets/ba-logo.png" alt="Brand Activate"/> */}
-            <img src="https://s3-us-west-1.amazonaws.com/brand-activate/ba-logo.png" alt="Brand Activate"/>
+          <a href="#" className="navbar-toggle navbar-brand" onClick={this.goToAnchor}>
+            <img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/>
           </a>
           <a href="" className={`nav-menu ${this.state.opened ? 'opened' : ''}`} onClick={this.menuClick}>
             <span className='lines'></span>
@@ -66,14 +65,26 @@ export default class NavBar extends React.Component {
         </div>
         <div id="navbar">
           <div className="nav-links">
-            <a href="/" onClick={this.goToAnchor}>Home</a>
-            <a href="/who-we-are" onClick={this.goToAnchor}>Who We are</a>
-            <a href="/what-we-do" onClick={this.goToAnchor}>what we do</a>
-            {/* <a href="#brand-activate" onClick={this.goToAnchor} className='logo'><img src="assets/ba-logo.png" alt="Brand Activate"/></a> */}
-            <a href="#brand-activate" onClick={this.goToAnchor} className='logo'><img src="https://s3-us-west-1.amazonaws.com/brand-activate/ba-logo.png" alt="Brand Activate"/></a>
-            <a href="/projects-partners" onClick={this.goToAnchor}>projects & partners</a>
-            <a href="/publications" onClick={this.goToAnchor}>publications</a>
-            <a href="/contact-us" onClick={this.goToAnchor}>contact us</a>
+            <div className="left">
+              <div className="section-container">
+                <a href="/" onClick={this.goToAnchor}>Home</a>
+                <a href="/who-we-are" onClick={this.goToAnchor}>Who We are</a>
+                <a href="/what-we-do" onClick={this.goToAnchor}>what we do</a>
+              </div>
+            </div>
+            <div className="middle">
+              <div className="section-container">
+                {/* <a href="#" onClick={this.goToAnchor} className='logo'><img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/></a> */}
+                <a href="#" onClick={this.goToAnchor} className='logo'>LOGO</a>
+              </div>
+            </div>
+            <div className="right">
+              <div className="section-container">
+                <a href="/projects-partners" onClick={this.goToAnchor}>projects & partners</a>
+                <a href="/publications" onClick={this.goToAnchor}>publications</a>
+                <a href="/contact-us" onClick={this.goToAnchor}>contact us</a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
