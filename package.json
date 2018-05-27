@@ -15,6 +15,7 @@
     "webpack-dev-server": "2.11.2"
   },
   "scripts": {
-    "dev": "foreman start -f Procfile.dev"
+    "dev": "foreman start -f Procfile.dev",
+    "generate_resource": "rails generate resource Service --no-helper --no-javascripts --no-test-framework"
   }
 }

@@ -42,10 +42,6 @@ export default class NavBar extends React.Component {
   toggleAndGoToAnchor = e =>{
   }
 
-  goToAnchor = e => {
-    e.preventDefault()
-  }
-
   render() {
     // const {navClass} = this.props
 
@@ -67,22 +63,22 @@ export default class NavBar extends React.Component {
           <div className="nav-links">
             <div className="left">
               <div className="section-container">
-                <a href="/" onClick={this.goToAnchor}>Home</a>
-                <a href="/who-we-are" onClick={this.goToAnchor}>Who We are</a>
-                <a href="/what-we-do" onClick={this.goToAnchor}>what we do</a>
+                <a href="/">Home</a>
+                <a href="/about">Who We are</a>
+                <a href="/services">what we do</a>
               </div>
             </div>
             <div className="middle">
               <div className="section-container">
-                {/* <a href="#" onClick={this.goToAnchor} className='logo'><img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/></a> */}
-                <a href="#" onClick={this.goToAnchor} className='logo'>LOGO</a>
+                {/* <a href="#"} className='logo'><img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/></a> */}
+                <a href="#" className='logo'>LOGO</a>
               </div>
             </div>
             <div className="right">
               <div className="section-container">
-                <a href="/projects-partners" onClick={this.goToAnchor}>projects & partners</a>
-                <a href="/publications" onClick={this.goToAnchor}>publications</a>
-                <a href="/contact-us" onClick={this.goToAnchor}>contact us</a>
+                <a href="/projects">projects & partners</a>
+                <a href="/publications">publications</a>
+                <a href="/contact">contact us</a>
               </div>
             </div>
           </div>

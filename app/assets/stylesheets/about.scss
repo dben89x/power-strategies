@@ -1,0 +1,45 @@
+#about {
+  display: block;
+  width: 100%;
+
+  #services {
+    .content {
+      padding: 3em;
+
+      h1 {
+        font-size: 3em;
+        border: 0.05em solid black;
+        padding: 0.5em 1em;
+        display: inline-block;
+      }
+      h2 {
+        font-weight: 500;
+        font-size: 1.2em;
+        text-transform: none;
+      }
+      p {
+        font-size: 0.7em;
+      }
+      .services-list {
+        display: inline-flex;
+        padding: 3em;
+
+        .service-item {
+          padding:3em;
+          img {
+            width: 6em;
+          }
+        }
+      }
+      a.action-btn {
+        color: white;
+        background: rgba(211, 91, 81, 1);
+        text-decoration: none;
+        font-size: 0.5em;
+        padding: 2em 6em;
+        border-radius: 4em;
+        font-weight: 100;
+      }
+    }
+  }
+}

@@ -4,6 +4,9 @@ import Home from '../components/Home';
 import Carousel from '../components/Carousel';
 import NavBar from '../components/NavBar';
 import Options from '../components/Options';
+import About from '../components/About';
+import Publications from '../components/Publications';
+import Services from '../components/Services';
 import ContactForm from '../components/ContactForm';
 
 ReactOnRails.register({
@@ -11,5 +14,8 @@ ReactOnRails.register({
   Carousel,
   NavBar,
   Options,
+  About,
+  Publications,
+  Services,
   ContactForm,
 });

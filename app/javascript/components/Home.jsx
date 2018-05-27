@@ -11,9 +11,21 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const {caseStudies, services} = this.props
+
+    const Service = ({service}) => (<div className="service-item">
+      <img src={service.icon} alt={service.title}/>
+      <h2>{service.title}</h2>
+      <p>{service.text}</p>
+    </div>)
+
+    const servicesList = services.map((service) => (
+      <Service service={service} key={service.key}/>
+    ))
+
     return (<div id="home">
       <section className="banner" id="hero-banner">
-        <Carousel caseStudies={this.props.caseStudies}/>
+        <Carousel caseStudies={caseStudies}/>
       </section>
       <section className="banner" id="trusted-by">
         <div className="content">
@@ -44,21 +56,7 @@ export default class Home extends React.Component {
         <div className="content">
           <h1>Our services</h1>
           <div className="services-list">
-            <div className="service-item">
-              <img src="assets/icons/lucky-sevens.png" alt="Casino Operations & Design"/>
-              <h2>Casino Operations & Design</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa.</p>
-            </div>
-            <div className="service-item">
-              <img src="assets/icons/planning.png" alt="Project Planning & Impementation"/>
-              <h2>Project Planning & Impementation</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa.</p>
-            </div>
-            <div className="service-item">
-              <img src="assets/icons/analysis.png" alt="Results Oriented Analysis"/>
-              <h2>Results Oriented Analysis</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa.</p>
-            </div>
+            {servicesList}
           </div>
           <a href='/services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
         </div>
