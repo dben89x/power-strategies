@@ -1,5 +1,8 @@
 @import 'variables';
 
+.nav-padding {
+  height: $navPadding;
+}
 nav {
   width: 100%;
   position: fixed;

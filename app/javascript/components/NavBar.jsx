@@ -45,7 +45,7 @@ export default class NavBar extends React.Component {
   render() {
     // const {navClass} = this.props
 
-    return (<div>
+    return (<div className='nav-padding'>
       <div className='nav-overlay'>
         <div className='page-links'>
         </div>

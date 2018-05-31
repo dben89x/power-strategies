@@ -22,9 +22,27 @@ export default class Template extends React.Component {
     ))
 
     return (<div id='about'>
-      <section className='banner' id='hero'></section>
-      <section className='banner' id='mission'></section>
-      <section className='banner' id='featured'></section>
+      <section className='banner hero-banner' id='hero' style={{backgroundImage: "url('assets/stock/device.jpg')"}}>
+        <div className="overlay"></div>
+        <h1>Making the complex simple</h1>
+      </section>
+      <section className='banner' id='mission'>
+        <div className="content">
+          <p>{aboutText.mission.paragraphs[0]}</p>
+          <p>{aboutText.mission.paragraphs[1]}</p>
+        </div>
+      </section>
+      <section className='banner' id='featured'>
+        <div className="left">
+          <img src="assets/stock/stephanie.jpg" alt="stephanie-maddocks"/>
+        </div>
+        <div className="right">
+          <h2>Meet Stephanie Maddocks</h2>
+          <p>{aboutText.featured.paragraphs[0]}</p>
+          <p>{aboutText.featured.paragraphs[1]}</p>
+          <p>{aboutText.featured.paragraphs[2]}</p>
+        </div>
+      </section>
       <section className="banner" id="services">
         <div className="content">
           <h1>Our services</h1>
@@ -34,6 +52,11 @@ export default class Template extends React.Component {
           </div>
           <a href='/services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
         </div>
+      </section>
+      <section className='banner cta-banner' style={{backgroundImage: "url('assets/stock/casino.jpg')"}}>
+        <div className="overlay"></div>
+        <h2>What Can Power Strategies Do For Your Business?</h2>
+        <a className="action-btn" href="/contact">Get in Touch</a>
       </section>
     </div>)
   }

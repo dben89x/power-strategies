@@ -72,6 +72,9 @@ $chevron_size: 50px;
         z-index: 3;
         margin: 0;
 
+        button {
+          font-family: 'slick';
+        }
         &.slick-active {
           // background: white;
 

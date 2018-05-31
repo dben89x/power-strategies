@@ -1,8 +1,52 @@
+@import 'variables';
+
 #about {
   display: block;
   width: 100%;
 
+  #mission {
+    background: $lightBrand;
+
+    .content {
+      padding: 5em 5em 8em;
+      text-align: left;
+      p {
+        color: white;
+        font-size: 1.3em;
+        font-weight: 100;
+      }
+    }
+  }
+  #featured {
+    display: inline-flex;
+
+    .left, .right {
+      width: 50%;
+      display: inline-flex;
+      text-align: left;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left img {
+      width: 100%;
+    }
+    .right {
+      padding: 5em 2em;
+      h2 {
+        text-transform: none;
+      }
+      p {
+        font-size: 1.2em;
+        color: $grey;
+      }
+    }
+  }
   #services {
+    .hero-banner {
+      h1 {
+        color: white;
+      }
+    }
     .content {
       padding: 3em;
 
@@ -11,6 +55,7 @@
         border: 0.05em solid black;
         padding: 0.5em 1em;
         display: inline-block;
+        border: none;
       }
       h2 {
         font-weight: 500;
