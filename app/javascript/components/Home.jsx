@@ -33,21 +33,21 @@ export default class Home extends React.Component {
           <p>A few of the notable commercial clients that Power Strategies has had the pleasure of working with.</p>
           <div className="trust-list">
             <div className="trust-item">
-              <img src="assets/trusted/aliante.png" alt="aliante"/>
+              <img src="https://s3.amazonaws.com/power-strategies/trusted/aliante.png" alt="aliante"/>
             </div>
             <div className="trust-item">
-              <img src="assets/trusted/gli.png" alt="gli"/>
+              <img src="https://s3.amazonaws.com/power-strategies/trusted/gli.png" alt="gli"/>
             </div>
             <div className="trust-item">
-              <img src="assets/trusted/cherokee-black.png" alt="cherokee"/>
+              <img src="https://s3.amazonaws.com/power-strategies/trusted/cherokee-black.png" alt="cherokee"/>
             </div>
           </div>
         </div>
       </section>
-      <section className='banner' id='mission' style={{backgroundImage: "url('assets/stock/casino.jpg')"}}>
+      <section className='banner' id='mission' style={{backgroundImage: "url('https://s3.amazonaws.com/power-strategies/stock/casino.jpg')"}}>
         <div className="overlay"></div>
         <div className="content">
-          <img src="assets/icons/cards-full.png" alt=""/>
+          <img src="https://s3.amazonaws.com/power-strategies/icons/cards-full.png" alt=""/>
           <h2>Power Strategies</h2>
           <p>We specialize in technology and operations for the casino gaming industry. Simply, your success is our primary concern. Contact us today to learn how we make the complex simple.</p>
         </div>

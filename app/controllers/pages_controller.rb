@@ -7,25 +7,25 @@ class PagesController < ApplicationController
       slug: 1,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/stock/gambling.jpg'
+      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
     },{
       id: 2,
       slug: 2,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/stock/gambling.jpg'
+      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
     },{
       id: 3,
       slug: 3,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/stock/gambling.jpg'
+      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
     },{
       id: 4,
       slug: 4,
       title: Faker::Lorem.words(2).join(' ').titleize,
       overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'assets/stock/gambling.jpg'
+      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
     }]
   end
 
@@ -70,17 +70,17 @@ class PagesController < ApplicationController
     @services = [{
         key: 1,
         title: "Casino Operations & Design",
-        icon: "assets/icons/lucky-sevens.png",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/lucky-sevens.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa."
       }, {
         key: 2,
         title: "Project Planning & Impement",
-        icon: "assets/icons/planning.png",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/planning.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa."
       }, {
         key: 3,
         title: "Results Oriented Analysis",
-        icon: "assets/icons/analysis.png",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/analysis.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, dolor consequat hendrerit fringilla, orci massa pretium quam, in scelerisque mi elit nec massa."
     }]
   end
