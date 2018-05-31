@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+- 2.4.0
+script:
+- yarn install
+deploy:
+  provider: heroku
+  api_key:
+    secure: sIfHf6iMGBt0rKPNdycJngu6B9q/7kWIeViw/dhUkSsLMtz4KZrwv6zNNNAMpnxz5EXuhrw6aI8DVvqPUHNcdJFyTTAiVnr+dAIfZyY1Rsh3FutzkocnyDAAqc8pLIZhHVGDU/yZFooeALsoXvnyswPPIGgZUsQCoNV7ic15ldrdxBQa8l5EZaEsxLCcBG4xZTs98WneV0Wl8OaZ5oj+xkhozHB6fRISU3B99/jlsbCUSoEI7Rh1mqWkv2Ma+lTSsanA2iobJ3ug/IV/ZMeqLwFEwSBu5mcOVr9OJ1CK4RLIW8/nXWeBt7p6G1goSe1qKS8PiMAv5WPe3LS+gnKE9/ojO6lTnR+xl8h9LO83YlQomFumuvpQeKDwYneCzyCBOP0ya0bTFxxPnztGVJT8cFZNsYFcU2uDq9f5EBEza+kANoPYSB5Ihx/huQF2lwNwemzKxoyZvOLALJ/44dTvLkuak+Vi19LtPirixClfesoXOGX0DGDv3XCrhKgulZLKO5aFmxGI2MggbzHLTCCggs5g0M5F5bMAVIutfAO++X5KEVf0vfHmbLrt2EYvHu2vz4uf2W7ipREE3mf56ldj1loM70v/q+Z6479vuyslg/MWRMpD4zoXHPwjLd6ZdrdQ1d46o9SYURWF7W+VJCodM1AF94vRHB1yQ4K4x/ypIt8=
+  app:
+    master: power-strategies
+    prod: power-strategies
+  on:
+    repo: dben89x/power-strategies
+  skip_cleanup: true
+notifications:
+  email: false
