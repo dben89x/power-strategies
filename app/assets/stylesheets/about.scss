@@ -87,4 +87,42 @@
       }
     }
   }
+  #team-members {
+    flex-direction: column;
+    h2 {
+      font-size: 3em;
+    }
+
+    .team-members-list {
+      display: flex;
+      flex-direction: column;
+      flex-flow: wrap;
+      padding: 2em;
+
+      .team-member {
+        width: 50%;
+        height: 20em;
+        text-align: left;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        margin: 2em 0;
+
+        .details-wrapper {
+          padding: 2em;
+
+          h3 {
+            text-transform: none;
+            font-weight: 900;
+            font-family: "RobotoBold", sans-serif;
+            font-size: 1.5em;
+          }
+        }
+
+      }
+    }
+
+  }
 }

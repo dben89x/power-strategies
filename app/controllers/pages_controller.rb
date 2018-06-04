@@ -2,31 +2,7 @@ class PagesController < ApplicationController
   before_action :set_services, only: [:home, :about]
 
   def home
-    @caseStudies = [{
-      id: 1,
-      slug: 1,
-      title: Faker::Lorem.words(2).join(' ').titleize,
-      overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
-    },{
-      id: 2,
-      slug: 2,
-      title: Faker::Lorem.words(2).join(' ').titleize,
-      overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
-    },{
-      id: 3,
-      slug: 3,
-      title: Faker::Lorem.words(2).join(' ').titleize,
-      overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
-    },{
-      id: 4,
-      slug: 4,
-      title: Faker::Lorem.words(2).join(' ').titleize,
-      overview: Faker::Lorem.words(15).join(' ').capitalize,
-      url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
-    }]
+    @caseStudies = CaseStudy.all
   end
 
   def about
@@ -48,6 +24,7 @@ class PagesController < ApplicationController
         ]
       }
     }
+    @team_members = TeamMember.all
   end
 
   def services

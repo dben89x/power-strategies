@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :projects
+  resources :requests
+  resources :team_members
+  resources :related_blog_posts
+  resources :blog_post_tags
+  resources :blog_tags
+  resources :blog_posts
+  resources :blog_authors
+  resources :blog_categories
   resources :services
   resources :case_studies
   get 'about' => 'pages#about'

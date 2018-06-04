@@ -15,11 +15,22 @@ export default class Template extends React.Component {
       <p>{service.text}</p>
     </div>)
 
-    const {aboutText, services} = this.props
+    const TeamMember = ({teamMember})=>(
+      <div className="team-member">
+        <div className="img-wrapper">
+          <img src={teamMember.image} alt={teamMember.name}/>
+        </div>
+        <div className="details-wrapper">
+          <h3 className='name'>{teamMember.name}</h3>
+          <p className='description'>{teamMember.description}</p>
+        </div>
+      </div>
+    )
 
-    const servicesList = services.map((service) => (
-      <Service service={service} key={service.key}/>
-    ))
+    const {aboutText, services, teamMembers} = this.props
+
+    const servicesList = services.map((service) => (<Service service={service} key={service.key}/>))
+    const teamMemberList = teamMembers.map((teamMember) => (<TeamMember teamMember={teamMember} key={teamMember.id}/>))
 
     return (<div id='about'>
       <section className='banner hero-banner' id='hero' style={{backgroundImage: "url('https://s3.amazonaws.com/power-strategies/stock/device.jpg')"}}>
@@ -57,6 +68,12 @@ export default class Template extends React.Component {
         <div className="overlay"></div>
         <h2>What Can Power Strategies Do For Your Business?</h2>
         <a className="action-btn" href="/contact">Get in Touch</a>
+      </section>
+      <section className='banner' id='team-members'>
+        <h2>Our team</h2>
+        <div className="team-members-list">
+          {teamMemberList}
+        </div>
       </section>
     </div>)
   }
