@@ -1,5 +1,5 @@
 @import 'variables';
-$chevron_size: 50px;
+$chevron_size: 3em;
 
 .case-studies-container {
   height: 100%;
@@ -30,35 +30,46 @@ $chevron_size: 50px;
       &.slick-prev, &.slick-next {
         width: 0;
         height: 0;
+
+        @media screen and (min-width: #{$desktop_common_width}) and (max-width: #{$desktop_large_width}) {
+          font-size: 30px;
+        }
+        @media screen and (min-width: #{$desktop_small_width}) and (max-width: #{$desktop_common_width}) {
+          font-size: 23px;
+        }
+        @media screen and (min-width: #{$tablet_horizontal_width}) and (max-width: #{$desktop_small_width}) {
+          font-size: 16px;
+        }
+        @media screen and (min-width: #{$tablet_vertical_width}) and (max-width: #{$tablet_horizontal_width}) {
+          font-size: 12px;
+        }
+        @media screen and (min-width: #{$mobile_large_width}) and (max-width: #{$tablet_vertical_width}) {
+          font-size: 14px;
+        }
+        @media screen and (min-width: #{$mobile_common_width}) and (max-width: #{$mobile_large_width}) {
+          font-size: 14px;
+        }
+        @media screen and (min-width: #{$mobile_small_width}) and (max-width: #{$mobile_large_width}) {
+          font-size: 14px;
+        }
+
+        .fal {
+          color: white;
+          font-size: $chevron_size;
+          font-weight: 100;
+        }
       }
 
       &.slick-prev {
-        left: 30px;
-        img {
-          left: 0px;
-        }
+        left: calc(#{$chevron_size/2});
       }
       &.slick-next {
-        right: 30px;
-        img {
-          right: 0px;
-        }
-      }
-      @media #{$mobile_large} {
-        &.slick-prev { left: 15px; }
-        &.slick-next { right: 15px; }
-      }
-      @media #{$mobile_common} {
-        &.slick-prev { left: 0; }
-        &.slick-next { right: 0; }
-      }
-      img {
-        width: 35px;
-        position: absolute;
+        right: calc(#{$chevron_size/2} + #{$chevron_size/2});
       }
     }
     .slick-list {
       z-index: 1;
+
       .slick-track {
         .slick-slide, .slick-slide *{ outline: none !important; }
       }
@@ -67,8 +78,6 @@ $chevron_size: 50px;
       bottom: 1em;
       height: 2em;
       li {
-        // border: 0.1em solid white;
-        // border-radius: 20px;
         z-index: 3;
         margin: 0;
 

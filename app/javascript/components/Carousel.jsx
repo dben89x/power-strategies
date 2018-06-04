@@ -21,8 +21,10 @@ export default class Home extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       appendDots: dots => <ul>{dots}</ul>,
-      prevArrow: (<SlickButton><img src="https://s3.amazonaws.com/power-strategies/left-chevron.svg" alt=""/></SlickButton>),
-      nextArrow: (<SlickButton><img src="https://s3.amazonaws.com/power-strategies/right-chevron.svg" alt=""/></SlickButton>)
+      // prevArrow: (<SlickButton><img src="https://s3.amazonaws.com/power-strategies/left-chevron.svg" alt=""/></SlickButton>),
+      // nextArrow: (<SlickButton><img src="https://s3.amazonaws.com/power-strategies/right-chevron.svg" alt=""/></SlickButton>)
+      prevArrow: (<SlickButton><i className='fal fa-chevron-left'/></SlickButton>),
+      nextArrow: (<SlickButton><i className='fal fa-chevron-right'/></SlickButton>)
     }
 
     var caseStudies = this.props.caseStudies.map((caseStudy) => {
