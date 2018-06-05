@@ -3,16 +3,16 @@ Rails.application.routes.draw do
   resources :requests
   resources :team_members
   resources :related_blog_posts
+  resources :services
   resources :blog_post_tags
   resources :blog_tags
   resources :blog_posts
   resources :blog_authors
   resources :blog_categories
-  resources :services
   resources :case_studies
   get 'about' => 'pages#about'
-  get 'services' => 'pages#services'
-  get 'projects' => 'pages#projects'
+  get 'our-services' => 'pages#services'
+  get 'our-projects' => 'pages#projects'
   get 'publications' => 'pages#publications'
   get 'contact' => 'pages#contact'
 

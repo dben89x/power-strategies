@@ -8,6 +8,7 @@ import About from '../components/About';
 import Publications from '../components/Publications';
 import Services from '../components/Services';
 import ContactForm from '../components/ContactForm';
+import Projects from '../components/Projects';
 
 ReactOnRails.register({
   Home,
@@ -18,4 +19,5 @@ ReactOnRails.register({
   Publications,
   Services,
   ContactForm,
+  Projects,
 });

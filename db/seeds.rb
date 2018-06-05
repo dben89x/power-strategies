@@ -1,3 +1,9 @@
+if Rails.env.development?
+  TeamMember.delete_all
+  Project.delete_all
+end
+
+
 10.times do
   TeamMember.create(
     name: Faker::GameOfThrones.character,
@@ -6,10 +12,24 @@
   )
 end
 
-4.times do
-  CaseStudy.create(
-    title: Faker::Lorem.words(2).join(' ').titleize,
-    overview: Faker::Lorem.words(15).join(' ').capitalize,
-    url: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg'
-  )
-end
+Project.create(
+  title: Faker::Lorem.words(2).join(' ').titleize,
+  image: 'https://s3.amazonaws.com/power-strategies/stock/casino.jpg',
+  overview: Faker::Lorem.words(20).join(' ').capitalize,
+  client_text: Faker::Lorem.words(50).join(' ').capitalize,
+  solution_text: Faker::Lorem.words(50).join(' ').capitalize,
+)
+Project.create(
+  title: Faker::Lorem.words(2).join(' ').titleize,
+  image: 'https://s3.amazonaws.com/power-strategies/stock/gambling.jpg',
+  overview: Faker::Lorem.words(20).join(' ').capitalize,
+  client_text: Faker::Lorem.words(50).join(' ').capitalize,
+  solution_text: Faker::Lorem.words(50).join(' ').capitalize,
+)
+Project.create(
+  title: Faker::Lorem.words(2).join(' ').titleize,
+  image: 'https://s3.amazonaws.com/power-strategies/stock/wires.jpg',
+  overview: Faker::Lorem.words(20).join(' ').capitalize,
+  client_text: Faker::Lorem.words(50).join(' ').capitalize,
+  solution_text: Faker::Lorem.words(50).join(' ').capitalize,
+)

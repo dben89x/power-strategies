@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_action :set_services, only: [:home, :about]
 
   def home
-    @caseStudies = CaseStudy.all
+    @caseStudies = Project.all
   end
 
   def about
@@ -28,10 +28,26 @@ class PagesController < ApplicationController
   end
 
   def services
-
+    @services = [{
+        key: 1,
+        title: "Casino Operations & Design",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/lucky-sevens.png",
+        overview: "With over 50 combined years of gaming experience, Power Strategies is proud to offer gaming and operational performance tools to enhance current operations."
+      }, {
+        key: 2,
+        title: "Project Planning & Impementation",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/planning.png",
+        overview: "Power Strategies provides industry implemented comprehensive technology plans which guide your business from solution selection through post-implementation support.  We coordinate project plans and processes with your team members, vendors and service providers to ensure the highest level of satisfaction."
+      }, {
+        key: 3,
+        title: "Results Oriented Analysis",
+        icon: "https://s3.amazonaws.com/power-strategies/icons/analysis.png",
+        overview: "Results oriented analysis examines gaming operations to review gaming device performance, progressive link review, and gaming database audit to assess current business models and recommend operational shifts to support changing business needs."
+    }]
   end
 
   def projects
+    @projects = Project.all
 
   end
 

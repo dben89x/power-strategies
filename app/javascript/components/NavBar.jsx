@@ -65,7 +65,7 @@ export default class NavBar extends React.Component {
               <div className="section-container">
                 <a href="/">Home</a>
                 <a href="/about">Who We are</a>
-                <a href="/services">what we do</a>
+                <a href="/our-services">what we do</a>
               </div>
             </div>
             <div className="middle">
@@ -76,7 +76,7 @@ export default class NavBar extends React.Component {
             </div>
             <div className="right">
               <div className="section-container">
-                <a href="/projects">projects & partners</a>
+                <a href="/our-projects">projects & partners</a>
                 <a href="/publications">publications</a>
                 <a href="/contact">contact us</a>
               </div>

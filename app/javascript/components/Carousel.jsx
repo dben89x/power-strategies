@@ -29,13 +29,13 @@ export default class Home extends React.Component {
 
     var caseStudies = this.props.caseStudies.map((caseStudy) => {
       return (<div className='case-study-container' key={caseStudy.id}>
-        <img src={caseStudy.url} alt={caseStudy.title}/>
+        <img src={caseStudy.image} alt={caseStudy.title}/>
         <div className='case-study-overlay'></div>
         <div key={caseStudy.id} className='case-study-links-wrapper'>
           <a href={`/case-studies/${caseStudy.slug}`} className='case-study-name'>{caseStudy.title}</a>
           <div className='description'>{caseStudy.overview}</div>
           <div className='view-text-wrapper'>
-            <a href={`/case-studies/${caseStudy.slug}`} className='view-text action-btn'>View caseStudy</a>
+            <a href={`/case-studies/${caseStudy.slug}`} className='view-text action-btn'>View case study</a>
           </div>
         </div>
       </div>)
