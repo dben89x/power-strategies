@@ -11,7 +11,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const {caseStudies, services} = this.props
+    const {projects, services} = this.props
 
     const Service = ({service}) => (<div className="service-item">
       <img src={service.icon} alt={service.title}/>
@@ -25,7 +25,7 @@ export default class Home extends React.Component {
 
     return (<div id="home">
       <section className="banner" id="hero-banner">
-        <Carousel caseStudies={caseStudies}/>
+        <Carousel projects={projects}/>
       </section>
       <section className="banner" id="trusted-by">
         <div className="content">

@@ -27,23 +27,23 @@ export default class Home extends React.Component {
       nextArrow: (<SlickButton><i className='fal fa-chevron-right'/></SlickButton>)
     }
 
-    var caseStudies = this.props.caseStudies.map((caseStudy) => {
-      return (<div className='case-study-container' key={caseStudy.id}>
-        <img src={caseStudy.image} alt={caseStudy.title}/>
-        <div className='case-study-overlay'></div>
-        <div key={caseStudy.id} className='case-study-links-wrapper'>
-          <a href={`/case-studies/${caseStudy.slug}`} className='case-study-name'>{caseStudy.title}</a>
-          <div className='description'>{caseStudy.overview}</div>
+    var projects = this.props.projects.map((project) => {
+      return (<div className='project-container' key={project.id}>
+        <img src={project.image} alt={project.title}/>
+        <div className='project-overlay'></div>
+        <div key={project.id} className='project-links-wrapper'>
+          <a href={`/projects/${project.slug}`} className='project-name'>{project.title}</a>
+          <div className='description'>{project.overview}</div>
           <div className='view-text-wrapper'>
-            <a href={`/case-studies/${caseStudy.slug}`} className='view-text action-btn'>View case study</a>
+            <a href={`/projects/${project.slug}`} className='view-text action-btn'>View case study</a>
           </div>
         </div>
       </div>)
     })
 
-    return (<div className="case-studies-container">
+    return (<div className="projects-container">
       <Slider {...settings}>
-        {caseStudies}
+        {projects}
       </Slider>
     </div>)
   }

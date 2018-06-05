@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_action :set_services, only: [:home, :about]
 
   def home
-    @caseStudies = Project.all
+    @projects = Project.all
   end
 
   def about
