@@ -11,7 +11,7 @@ export default class Template extends React.Component {
 
     const Service = ({service}) => (<div className="service-item">
       <img src={service.icon} alt={service.title}/>
-      <h2>{service.title}</h2>
+      <h3>{service.title}</h3>
       <p>{service.text}</p>
     </div>)
 
@@ -56,21 +56,21 @@ export default class Template extends React.Component {
       </section>
       <section className="banner" id="services">
         <div className="content">
-          <h1>Our services</h1>
+          <h2>Our services</h2>
 
           <div className="services-list">
             {servicesList}
           </div>
-          <a href='/services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
+          <a href='/our-services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
         </div>
       </section>
       <section className='banner cta-banner' style={{backgroundImage: "url('https://s3.amazonaws.com/power-strategies/stock/casino.jpg')"}}>
         <div className="overlay"></div>
         <h2>What Can Power Strategies Do For Your Business?</h2>
-        <a className="action-btn" href="/contact">Get in Touch</a>
+        <a className="action-btn" href="mailto:stephanie@powerstrategies.co">Get in Touch</a>
       </section>
       <section className='banner' id='team-members'>
-        <h2>Our team</h2>
+        <h1>Our team</h1>
         <div className="team-members-list">
           {teamMemberList}
         </div>

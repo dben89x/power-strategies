@@ -3,14 +3,14 @@
 #our-services {
   #hero {
     background-image: url("https://s3.amazonaws.com/power-strategies/stock/our-services-hero.jpg");
-    padding: 10em;
     background-position: center;
 
     p {
       color: white;
       z-index: 2;
       font-size: 1.3em;
-      font-family: 'RobotoThin', sans-serif;
+      font-family: 'Lato';
+      font-weight: 200;
     }
     .overlay {
       background: $lightBrandAlpha1;
@@ -38,13 +38,15 @@
             width: 2.5em;
           }
           h2 {
-            font-weight: 900;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-transform: none;
-            font-family: 'RobotoBold', sans-serif;
+            font-family: 'Montserrat';
+            font-weight: 700;
           }
           p {
             font-size: 0.7em;
+            font-family: 'Lato';
+            font-weight: 400;
           }
           .bullet-list {
             ul {
@@ -55,9 +57,8 @@
               li {
                 text-align: left;
                 margin: 0.5em 0;
-                font-family: 'RobotoLight', sans-serif;
                 list-style: inside;
-                font-weight: 100;
+                font-weight: 200;
                 font-size: 0.8em;
                 color: $grey;
               }
@@ -96,6 +97,46 @@
       }
       .right {
 
+      }
+    }
+    @media #{$tablet_vertical} {
+      .service {
+        .left, .right {
+          width: 100%;
+        }
+        &.ltr {
+          flex-direction: column;
+
+          .left {
+            height: 20em;
+          }
+          .right {
+            height: auto;
+          }
+        }
+        &.rtl {
+          flex-direction: column-reverse;
+
+          .left {
+            height: auto;
+          }
+          .right {
+            height: 20em;
+          }
+        }
+      }
+    }
+    @media #{$mobile_large} {
+      .service {
+        .left, .right {
+          .service-text {
+
+            padding: 2em;
+            .bullet-list.split ul {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

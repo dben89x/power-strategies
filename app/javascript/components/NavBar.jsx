@@ -48,13 +48,16 @@ export default class NavBar extends React.Component {
     return (<div className='nav-padding'>
       <div className='nav-overlay'>
         <div className='page-links'>
+          <a href="/">Home</a>
+          <a href="/about">Who We are</a>
+          <a href="/our-services">what we do</a>
+          <a href="/our-projects">projects & partners</a>
+          <a href="/publications">publications</a>
+          <a href="mailto:stephanie@powerstrategies.co">contact us</a>
         </div>
       </div>
       <nav className={`navbar navbar-fixed-top ${this.state.navClass}`}>
         <div className="navbar-header">
-          <a href="#" className="navbar-toggle navbar-brand" onClick={this.goToAnchor}>
-            <img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/>
-          </a>
           <a href="" className={`nav-menu ${this.state.opened ? 'opened' : ''}`} onClick={this.menuClick}>
             <span className='lines'></span>
           </a>
@@ -78,7 +81,7 @@ export default class NavBar extends React.Component {
               <div className="section-container">
                 <a href="/our-projects">projects & partners</a>
                 <a href="/publications">publications</a>
-                <a href="/contact">contact us</a>
+                <a href="mailto:stephanie@powerstrategies.co">contact us</a>
               </div>
             </div>
           </div>

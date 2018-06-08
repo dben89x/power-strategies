@@ -1,7 +1,7 @@
 @import 'variables';
 
 a.nav-menu {
-  float: right;
+  float: left;
   position: relative;
   right: 0;
   z-index: 4;
@@ -19,12 +19,14 @@ a.nav-menu {
   span.lines::after,
   span.lines::before {
     width: 2em;
-    height: 0.08em;
-    background-color: $lightBrand;
+    height: 0.15em;
+    background-color: $black;
     position: absolute;
     top: 50%;
     left: calc(50% - 1em);
-
+  }
+  span.lines::after {
+    width: 1em;
   }
 
   span.lines {
@@ -63,26 +65,26 @@ a.nav-menu {
     transform: translateY(0.75em);
   }
 
-  &.opened {
-    span.lines {
-      background-color: transparent;
-    }
-
-    span.lines::before {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-
-    span.lines::after {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-
-    }
-  }
+  // &.opened {
+  //   span.lines {
+  //     background-color: transparent;
+  //   }
+  //
+  //   span.lines::before {
+  //     -webkit-transform: rotate(45deg);
+  //     -moz-transform: rotate(45deg);
+  //     -ms-transform: rotate(45deg);
+  //     -o-transform: rotate(45deg);
+  //     transform: rotate(45deg);
+  //   }
+  //
+  //   span.lines::after {
+  //     -webkit-transform: rotate(-45deg);
+  //     -moz-transform: rotate(-45deg);
+  //     -ms-transform: rotate(-45deg);
+  //     -o-transform: rotate(-45deg);
+  //     transform: rotate(-45deg);
+  //
+  //   }
+  // }
 }

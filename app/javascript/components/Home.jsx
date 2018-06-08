@@ -15,7 +15,7 @@ export default class Home extends React.Component {
 
     const Service = ({service}) => (<div className="service-item">
       <img src={service.icon} alt={service.title}/>
-      <h2>{service.title}</h2>
+      <h3>{service.title}</h3>
       <p>{service.text}</p>
     </div>)
 
@@ -54,11 +54,11 @@ export default class Home extends React.Component {
       </section>
       <section className="banner" id="services">
         <div className="content">
-          <h1>Our services</h1>
+          <h2>Our services</h2>
           <div className="services-list">
             {servicesList}
           </div>
-          <a href='/services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
+          <a href='/our-services' className="action-btn brand-btn">VIEW ALL SERVICES</a>
         </div>
       </section>
       <section className="banner" id="survey">

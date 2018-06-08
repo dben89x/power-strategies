@@ -18,13 +18,13 @@
     align-items: center;
 
     h1 {
-      font-size: 3.5em;
+      font-size: 3em;
     }
     .content {
       width: 65%;
       margin: 3em 0;
 
-      p {font-size: 1.3em}
+      p {font-size: 1em}
 
       .trust-list {
         display: flex;
@@ -33,6 +33,22 @@
         padding: 2em 0;
         align-items: center;
       }
+    }
+    @media #{$tablet_vertical} {
+      .content {
+        width: 100%;
+
+        .trust-list {
+          flex-direction: column;
+
+          .trust-item {
+            margin: 2em 0;
+          }
+        }
+      }
+    }
+    @media #{$mobile_large} {
+      padding: 3em;
     }
   }
   #mission {
@@ -69,58 +85,26 @@
     }
   }
   #services {
-    .content {
-      padding: 3em;
-
-      h1 {
-        font-size: 3em;
-        border: 0.05em solid black;
-        padding: 0.5em 1em;
-        display: inline-block;
-      }
-      h2 {
-        font-weight: 500;
-        font-size: 1.2em;
-        text-transform: none;
-      }
-      p {
-        font-size: 0.7em;
-      }
-      .services-list {
-        display: inline-flex;
-        padding: 3em;
-
-        .service-item {
-          padding:3em;
-          img {
-            width: 6em;
-          }
-        }
-      }
-      a.action-btn {
-        color: white;
-        background: rgba(211, 91, 81, 1);
-        text-decoration: none;
-        font-size: 0.5em;
-        padding: 2em 6em;
-        border-radius: 4em;
-        font-weight: 100;
-      }
+    h2 {
+      border: 0.05em solid black;
+      padding: 0.5em 1em;
     }
   }
   #survey {
     display: inline-block;
-    
+
     .content {
       padding: 3em 6em;
 
-      h2 {
+      h3 {
         text-transform: none;
         margin: 2em 0 0;
+        font-size: 2em;
       }
       p {
         font-size: 1.2em;
         margin: 0.5em;
+        font-family: 'Montserrat';
       }
 
       .options {
@@ -139,6 +123,8 @@
           cursor: pointer;
           transition: 0.2s;
           position: relative;
+          font-family: 'Lato';
+          font-weight: 800;
 
           &:hover {
             box-shadow: inset 0 0 150px 100px $lightBrandAlpha4;
@@ -207,6 +193,21 @@
           cursor: pointer;
           pointer-events: all;
         }
+      }
+    }
+    @media #{$tablet_vertical} {
+      .content .options {
+        flex-direction: column;
+
+        .option {
+          width: 100%;
+          margin: 2em 0;
+        }
+      }
+    }
+    @media #{$mobile_large} {
+      .content  {
+        padding: 3em;
       }
     }
   }

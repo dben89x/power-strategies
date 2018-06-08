@@ -18,7 +18,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application'
   %body
-    =react_component 'NavBar', props: {navClass: current_page?(root_path) ? 'navbar-transparent' : 'navbar-opaque'}, prerender: false
+    =react_component 'NavBar', html_options: {class: 'nav-container'}, props: {navClass: current_page?(root_path) ? 'navbar-transparent' : 'navbar-opaque'}, prerender: false
     .application-container
       = yield
     =render 'layouts/footer'

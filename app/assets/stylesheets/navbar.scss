@@ -3,6 +3,9 @@
 .nav-padding {
   height: $navPadding;
 }
+.nav-container {
+  height: 10vh;
+}
 nav {
   width: 100%;
   position: fixed;
@@ -87,13 +90,17 @@ nav {
       text-transform: uppercase;
       text-decoration: none;
       font-size: 0.7em;
+      font-family: 'Montserrat';
 
       &.logo img {
         width: 3em;
       }
       &.logo {
-        font-size: 2em;
-        margin: 0.5em;
+        font-family: 'Lato';
+        font-weight: 800;
+        margin: 2vh 0.5em;
+        font-size: 2.5em;
+        color: $grey;
       }
     }
   }
@@ -101,18 +108,17 @@ nav {
 
 .nav-overlay {
   display: none;
-  color: white;
   position: fixed;
   top: 0;
   height: 100%;
   width: 100%;
-  background: $lightBrand;
+  background: white;
   overflow: auto;
   z-index: 4;
 
   a {
     text-decoration: none;
-    color: white !important;
+    color: $lightBrand !important;
     opacity: 0.7;
     transition: 0.3s;
 
@@ -133,8 +139,8 @@ nav {
       display: block;
       text-transform: uppercase;
       margin: 1.3em 0;
-      letter-spacing: 5px;
-      font-size: 1.5em;
+      letter-spacing: 2px;
+      font-size: 1.25em;
     }
   }
 

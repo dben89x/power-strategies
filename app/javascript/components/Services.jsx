@@ -25,7 +25,7 @@ export default class Template extends React.Component {
         <p>Power Strategies oversees the technology implementation process for a variety of technology systems, including casino management systems, financial systems, and human resources information systems.  We develop casino operations plans and logistics and support your organization during transition and growth.</p>
       </section>
       <section className="banner" id="services">
-        <div className="service">
+        <div className="service ltr">
           <div className="left" style={{backgroundImage: 'url("https://s3.amazonaws.com/power-strategies/stock/cash-operations.jpg")'}}>
           </div>
           <div className="right">
@@ -46,7 +46,7 @@ export default class Template extends React.Component {
             </ServiceText>
           </div>
         </div>
-        <div className="service">
+        <div className="service rtl">
           <div className="left">
             <ServiceText service={services[1]}>
               <div className="bullet-list full">
@@ -73,7 +73,7 @@ export default class Template extends React.Component {
           <div className="right" style={{backgroundImage: 'url("https://s3.amazonaws.com/power-strategies/stock/project-planning.jpg")'}}>
           </div>
         </div>
-        <div className="service">
+        <div className="service ltr">
           <div className="left" style={{backgroundImage: 'url("https://s3.amazonaws.com/power-strategies/stock/analysis.jpg")'}}>
           </div>
           <div className="right">
@@ -99,7 +99,7 @@ export default class Template extends React.Component {
       <section className='banner cta-banner'>
         <div className="overlay"></div>
         <h2>What Can Power Strategies Do For Your Business?</h2>
-        <a className="action-btn" href="/contact">Get in Touch</a>
+        <a className="action-btn" href="mailto:stephanie@powerstrategies.co">Get in Touch</a>
       </section>
     </div>)
   }

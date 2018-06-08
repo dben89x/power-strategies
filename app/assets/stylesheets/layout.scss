@@ -6,7 +6,7 @@
 body {
   margin: 0;
   background: $lightBody;
-  font-family: Roboto, sans-serif, Verdana, Geneva, sans-serif;
+  font-family: 'Lato';
   @media screen and (min-width: #{$desktop_large_width}) and (max-width: #{$desktop_xl_width}) {
     font-size: 37px;
   }
@@ -70,6 +70,9 @@ html {
   justify-content: center;
   align-items: center;
   background-position-y: 50%;
+  padding: 15vh 5vh;
+  // padding: 5em;
+  background-size: cover;
 
   .overlay {
     background: rgba(0,0,0,0.5);
@@ -85,78 +88,41 @@ html {
     z-index: 3;
     margin: 0;
   }
-}
-.cta-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: 100%;
-  background-position-y: 50%;
-  position: relative;
-  height: 20em;
-  background-image: url('https://s3.amazonaws.com/power-strategies/stock/casino.jpg');
-
-  h2 {
-    color: white;
-    z-index: 2;
-    text-transform: none;
-  }
-  .action-btn {
-    background: white;
-    color: black;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
-    padding: 1.5em 8em;
-    font-family: 'RobotoLight', sans-serif;
-  }
-
-  .overlay {
-    background: $lightBrandAlpha3;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  @media #{$tablet_vertical} {
+    height: auto;
   }
 }
-.view-text-wrapper {
-  width: 100%;
-  position: relative;
-
-  a.view-text {
-    display: inline-block;
-    text-transform: uppercase;
-    border-radius: 0;
-    border: 0.1em solid white;
-    padding: 1em 2em;
-    font-family: 'RobotoThin', sans-serif;
-    font-size: 0.7em;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-    letter-spacing: 0.1em;
-
-    &:hover {
-      background: rgba(255,255,255,0.2);
-    }
-  }
-}
-h1, h2, p {
+h1, h2, h3, p {
   color: $black
 }
-h1 {
-  letter-spacing: 3px;
-  font-weight: 100;
-  font-size: 5em;
-  margin: 0 0 0.5em;
-  line-height: 1;
+h1, h2, h3 {
+  font-family: 'Lato';
+}
+h1, h2 {
   text-transform: uppercase;
 }
+h1 {
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 4.5em;
+  margin: 0;
+  line-height: 1;
 
+  @media #{$mobile_large} {
+    font-size: 2.5em;
+  }
+}
 h2 {
-  font-weight: 300;
   font-size: 2em;
-  text-transform: uppercase;
+  font-weight: 700;
+
+  @media #{$mobile_large} {
+    font-size: 1.5em;
+  }
+}
+p {
+  font-family: 'Lora';
+  font-weight: 100;
 }
 
 .action-btn {
@@ -170,9 +136,151 @@ h2 {
   text-transform: uppercase;
   z-index: 3;
   display: inline-block;
+  font-family: 'Montserrat';
 
   &.brand-btn {
     background: $lightBrand;
+  }
+}
+
+.cta-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 100%;
+  background-position-y: 50%;
+  position: relative;
+  height: 25em;
+  background-image: url('https://s3.amazonaws.com/power-strategies/stock/casino.jpg');
+
+  h2 {
+    color: white;
+    z-index: 2;
+    text-transform: none;
+    font-size: 3em;
+    font-weight: 700;
+  }
+  .action-btn {
+    background: white;
+    color: black;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    padding: 1.5em 8em;
+    font-weight: 400;
+  }
+
+  .overlay {
+    background: $lightBrandAlpha3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  @media #{$tablet_vertical} {
+    h2 {
+      font-size: 2em;
+    }
+  }
+}
+
+.view-text-wrapper {
+  width: 100%;
+  position: relative;
+
+  a.view-text {
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 0.1em solid white;
+    padding: 1em 2em;
+    font-size: 0.6em;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    letter-spacing: 0.1em;
+
+    &:hover {
+      background: rgba(255,255,255,0.2);
+    }
+  }
+}
+
+#services {
+  .content {
+    padding: 3em;
+
+    h2 {
+      font-size: 2.5em;
+      display: inline-block;
+      font-weight: 800;
+    }
+    h3 {
+      font-family: 'Montserrat';
+      font-size: 1em;
+      font-weight: 500;
+      text-transform: none;
+    }
+    p {
+      font-size: 0.7em;
+    }
+    .services-list {
+      display: inline-flex;
+      padding: 0 3em;
+      flex-direction: row;
+
+      .service-item {
+        padding:3em;
+        img {
+          width: 6em;
+        }
+      }
+    }
+    a.action-btn {
+      color: white;
+      background: rgba(211, 91, 81, 1);
+      text-decoration: none;
+      font-size: 0.5em;
+      padding: 2em 6em;
+      border-radius: 4em;
+      font-weight: 100;
+    }
+  }
+  @media #{$tablet_vertical} {
+    font-size: 1.5em;
+
+    .content {
+      h2 {
+        border: 0.05em solid black;
+        padding: 0.5em 1em;
+      }
+      .services-list {
+        flex-direction: column;
+      }
+    }
+  }
+  @media #{$mobile_large} {
+    font-size: 1em;
+
+    .content {
+      h2 {
+        font-size: 2em;
+      }
+      .services-list {
+        padding: 0;
+
+        .service-item {
+          padding: 3em 0;
+
+          h3 {
+            font-size: 1.5em;
+          }
+          p {
+            font-size: 1em;
+          }
+        }
+      }
+    }
   }
 }
 
