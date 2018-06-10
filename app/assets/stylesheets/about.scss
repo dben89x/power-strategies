@@ -63,6 +63,15 @@
         font-weight: 200;
       }
     }
+    @media #{$mobile_landscape} {
+      height: 90vw;
+      
+      .left, .right {
+        img {
+          height: 50vw;
+        }
+      }
+    }
     @media #{$tablet_vertical} {
       height: auto;
       font-size: 1.5em;

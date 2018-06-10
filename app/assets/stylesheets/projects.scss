@@ -74,4 +74,9 @@
   .content {
     padding: 4em 10em;
   }
+  @media #{$mobile_landscape} {
+    .project {
+      height: 70vw;
+    }
+  }
 }

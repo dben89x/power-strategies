@@ -8,6 +8,9 @@
     background: $lightBrand;
     height: calc(100vh - #{$navPadding}) !important;
     display: inline-block;
+    @media #{$mobile_landscape} {
+      height: calc(100vh - #{$navPaddingLandscape}) !important;
+    }
   }
 
   #trusted-by {

@@ -31,6 +31,9 @@ body {
   @media screen and (min-width: #{$mobile_small_width}) and (max-width: #{$mobile_large_width}) {
     font-size: 14px;
   }
+  @media #{$mobile_landscape} {
+    font-size: 0.7em;
+  }
 }
 
 html {
@@ -87,6 +90,9 @@ html {
     color: white;
     z-index: 3;
     margin: 0;
+  }
+  @media #{$mobile_landscape} {
+    padding: 15vw 5vw;
   }
   @media #{$tablet_vertical} {
     height: auto;
