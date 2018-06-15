@@ -219,7 +219,7 @@
     position: relative;
     background-image: url('https://s3.amazonaws.com/power-strategies/stock/contact.jpg');
     background-size: cover;
-    height: 60vh;
+    height: 100vh;
     padding: 5vw;
 
     .overlay {
@@ -266,7 +266,7 @@
         border-radius: 1pt;
         border: 0;
       }
-      input[type=submit] {
+      input[type=submit], .badge {
         background: $lightBrand;
         border-radius: 3pt;
         text-transform: uppercase;
@@ -275,6 +275,27 @@
         border: 0;
         padding: 1em 2em;
         font-weight: 600;
+        cursor: pointer;
+      }
+      .badges {
+        display: flex;
+        flex-direction: column;
+
+        .badge {
+          text-transform: none;
+          font-size: 0.6em;
+          border-radius: 2em;
+          margin: 0.5em 0;
+        }
+      }
+    }
+    @media #{$tablet_vertical} {
+      .content {
+        text-align: center;
+        width: 100%;
+        form {
+          align-items: center;
+        }
       }
     }
   }

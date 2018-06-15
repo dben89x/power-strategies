@@ -5,13 +5,21 @@ import Options from './Options'
 export default class Home extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      options: []
+    }
   }
 
-  componentDidMount() {
+  updateOptions =(options)=>{
+    this.setState({options},()=>{
+      console.log(this.state.options)
+    })
+
   }
 
   render() {
     const {projects, services} = this.props
+    var {options} = this.state
 
     const Service = ({service}) => (<div className="service-item">
       <img src={service.icon} alt={service.title}/>
@@ -22,6 +30,8 @@ export default class Home extends React.Component {
     const servicesList = services.map((service) => (
       <Service service={service} key={service.key}/>
     ))
+
+
 
     return (<div id="home">
       <section className="banner" id="hero-banner">
@@ -62,7 +72,7 @@ export default class Home extends React.Component {
         </div>
       </section>
       <section className="banner" id="survey">
-        <Options/>
+        <Options optionsUpdated={this.updateOptions}/>
       </section>
       <section className='banner flex row start' id='contact'>
         <div className="overlay"></div>
@@ -74,9 +84,14 @@ export default class Home extends React.Component {
               Your Email Adress:
             </label>
             <input type="email" name='email'/>
+            {options.length > 0 ? <p>Your preferences:</p> : null}
+            <div className="badges">
+              {options.construction ? <div className="badge">New Construction</div> : null}
+              {options.upgrade ? <div className="badge">Ready for an Upgrade</div> : null}
+              {options.other ? <div className="badge">{options.otherText || 'Not specified'}</div> : null}
+            </div>
             <input type="submit" value='Submit'/>
           </form>
-
         </div>
 
       </section>

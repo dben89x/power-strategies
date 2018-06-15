@@ -27,16 +27,11 @@ export default class NavBar extends React.Component {
   }
 
   openMenu = () =>{
-    $('.nav-overlay').fadeToggle(200, () => {
-      $('.application-container').fadeToggle(0)
-    })
+    $('.nav-overlay').fadeToggle(200)
   }
 
   closeMenu = () =>{
-    $('.application-container').fadeToggle(0, () => {
-      $('.nav-overlay').fadeToggle(200, ()=>{
-      })
-    })
+      $('.nav-overlay').fadeToggle(200)
   }
 
   toggleAndGoToAnchor = e =>{
@@ -58,7 +53,7 @@ export default class NavBar extends React.Component {
       </div>
       <nav className={`navbar navbar-fixed-top ${this.state.navClass}`}>
         <div className="navbar-header">
-          <a href="" className={`nav-menu ${this.state.opened ? 'opened' : ''}`} onClick={this.menuClick}>
+          <a className={`nav-menu ${this.state.opened ? 'opened' : ''}`} onClick={this.menuClick}>
             <span className='lines'></span>
           </a>
         </div>

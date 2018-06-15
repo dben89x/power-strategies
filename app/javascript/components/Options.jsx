@@ -15,21 +15,21 @@ export default class Options extends React.Component {
 
   chooseOption=(e)=>{
     var target = e.target
-    this.setState({[target.id]: !this.state[target.id]})
+    this.setState({[target.id]: !this.state[target.id]}, ()=>{
+      this.props.optionsUpdated(this.state)
+    })
   }
 
   confirmOptions=(e)=>{
-    // e.preventDefault()
-    console.log($('input.other-input').first().val())
-
-    // var otherText = $('#other input').first().val()
-    // this.setState({otherText: otherText}, ()=>{
-    //   $('.options-container').first().fadeOut(300)
-    // })
+    e.preventDefault()
+    // $('.options-container').first().slideUp(300)
+    $('html, body').animate({scrollTop: $('#contact').offset().top})
   }
   inputChange=(e)=>{
     var target = e.target
-    this.setState({otherText: target.value})
+    this.setState({otherText: target.value}, ()=>{
+      this.props.optionsUpdated(this.state)
+    })
   }
 
   render() {
@@ -54,8 +54,8 @@ export default class Options extends React.Component {
               <input type="text" placeholder='Please specify' onChange={this.inputChange} className={`other-input ${this.state.other ? 'visible' : 'hidden'}`}/>
             </div>
           </div>
-          {/* <a className={`action-btn brand-btn ${this.state.construction || this.state.upgrade || this.state.other ? 'active' : 'inactive'}`} onClick={this.confirmOptions}>That's me</a> */}
-          <a href={`mailto:stephanie@powerstrategies.co?subject=Help%20me%20with%20my%20business!&body=My%20needs%20are:%20${this.state.construction ? 'New construction, ' : ''}${this.state.upgrade ? 'Ready for upgrade, ' : ''}${this.state.other ? this.state.otherText : ''}`} className={`action-btn brand-btn ${this.state.construction || this.state.upgrade || this.state.other ? 'active' : 'inactive'}`} onClick={this.confirmOptions}>That's me</a>
+          {/* <a href={`mailto:stephanie@powerstrategies.co?subject=Help%20me%20with%20my%20business!&body=My%20needs%20are:%20${this.state.construction ? 'New construction, ' : ''}${this.state.upgrade ? 'Ready for upgrade, ' : ''}${this.state.other ? this.state.otherText : ''}`} className={`action-btn brand-btn ${this.state.construction || this.state.upgrade || this.state.other ? 'active' : 'inactive'}`} onClick={this.confirmOptions}>That's me</a> */}
+          <a href='' className={`action-btn brand-btn ${this.state.construction || this.state.upgrade || this.state.other ? 'active' : 'inactive'}`} onClick={this.confirmOptions}>That's me</a>
         </div>
         {/* <ContactForm construction={this.state.construction} upgrade={this.state.upgrade} other={this.state.other} otherText={this.state.otherText}/> */}
       </div>
