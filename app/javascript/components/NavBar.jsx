@@ -69,7 +69,7 @@ export default class NavBar extends React.Component {
             <div className="middle">
               <div className="section-container">
                 {/* <a href="#"} className='logo'><img src="https://s3-us-west-1.amazonaws.com/logo.png" alt="Power Strategies"/></a> */}
-                <a href="#" className='logo'>LOGO</a>
+                <a href="#" className='logo'><img src="https://s3.amazonaws.com/power-strategies/logo.png" alt="powerstrategies"/></a>
               </div>
             </div>
             <div className="right">
