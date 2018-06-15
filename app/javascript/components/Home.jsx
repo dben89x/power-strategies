@@ -88,7 +88,7 @@ export default class Home extends React.Component {
             <div className="badges">
               {options.construction ? <div className="badge">New Construction</div> : null}
               {options.upgrade ? <div className="badge">Ready for an Upgrade</div> : null}
-              {options.other ? <div className="badge">{options.otherText || 'Not specified'}</div> : null}
+              {options.other ? <div className="badge">{options.otherText || 'Other (Not specified)'}</div> : null}
             </div>
             <input type="submit" value='Submit'/>
           </form>
