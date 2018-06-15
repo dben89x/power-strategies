@@ -214,4 +214,68 @@
       }
     }
   }
+
+  #contact {
+    position: relative;
+    background-image: url('https://s3.amazonaws.com/power-strategies/stock/contact.jpg');
+    background-size: cover;
+    height: 60vh;
+    padding: 5vw;
+
+    .overlay {
+      background: rgba(0,0,0,0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .content {
+      text-align: left;
+      z-index: 3;
+      width: 30%;
+
+      h2, p, label {
+        color: white;
+        text-transform: none;
+        margin: 0;
+      }
+      h2 {
+        margin: 0.3em 0;
+        border-bottom: 4pt solid $lightBrand;
+        font-size: 3em;
+        font-weight: 900;
+      }
+
+      p, form, input, label {
+        font-family: 'Montserrat';
+        font-weight: 200;
+      }
+      p, label, input {
+        margin: 0.5em 0;
+        font-size: 0.8em;
+      }
+      form {
+        align-items: flex-start;
+      }
+      input[type=email] {
+        width: 100%;
+        padding: 0.5em 1em;
+        border-radius: 1pt;
+        border: 0;
+      }
+      input[type=submit] {
+        background: $lightBrand;
+        border-radius: 3pt;
+        text-transform: uppercase;
+        color: white;
+        outline: 0;
+        border: 0;
+        padding: 1em 2em;
+        font-weight: 600;
+      }
+    }
+  }
 }

@@ -64,6 +64,22 @@ export default class Home extends React.Component {
       <section className="banner" id="survey">
         <Options/>
       </section>
+      <section className='banner flex row start' id='contact'>
+        <div className="overlay"></div>
+        <div className="content">
+          <h2>Let’s Get in Touch</h2>
+          <p>We specialize in helping businesses like yours strategically develop new casinos, upgrade existing ones, and solve other issues with a tactical approach.</p>
+          <form action="contact_request" className='flex col start'>
+            <label htmlFor="email">
+              Your Email Adress:
+            </label>
+            <input type="email" name='email'/>
+            <input type="submit" value='Submit'/>
+          </form>
+
+        </div>
+
+      </section>
     </div>)
   }
 }

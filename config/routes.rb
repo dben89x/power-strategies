@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'publications' => 'pages#publications'
   get 'contact' => 'pages#contact'
 
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

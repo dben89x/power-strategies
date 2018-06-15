@@ -211,7 +211,28 @@ p {
     }
   }
 }
+.flex {
+  display: flex;
 
+  &.col {
+    flex-direction: column;
+  }
+  &.row {
+    flex-direction: row;
+  }
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+  &.start {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &.end {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 #services {
   .content {
     padding: 3em;
