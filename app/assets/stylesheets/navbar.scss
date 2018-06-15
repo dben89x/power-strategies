@@ -7,10 +7,10 @@
   }
 }
 .nav-container {
-  height: 10vh;
+  height: $navPadding;
 
   @media #{$mobile_landscape} {
-    height: 10vw;
+    height: $navPaddingLandscape;
     font-size: 0.5em;
   }
 }
@@ -63,7 +63,12 @@ nav {
     list-style: none;
     padding: 0;
     width: 100%;
-    display: inline-block;
+    display: inline-flex;
+    height: $navPadding;
+
+    @media #{$mobile_landscape} {
+      height: $navPaddingLandscape;
+    }
 
     @media #{$tablet_vertical} {
       display: none;
@@ -152,7 +157,7 @@ nav {
     }
     @media #{$tablet_vertical} {
       a {
-        font-size: 2em;
+        font-size: 1.5em;
       }
     }
     @media #{$mobile_large} {
