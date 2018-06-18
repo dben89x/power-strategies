@@ -79,19 +79,7 @@ export default class Home extends React.Component {
         <div className="content">
           <h2>Let’s Get in Touch</h2>
           <p>We specialize in helping businesses like yours strategically develop new casinos, upgrade existing ones, and solve other issues with a tactical approach.</p>
-          <form action="contact_request" className='flex col start'>
-            <label htmlFor="email">
-              Your Email Adress:
-            </label>
-            <input type="email" name='email'/>
-            {options.length > 0 ? <p>Your preferences:</p> : null}
-            <div className="badges">
-              {options.construction ? <div className="badge">New Construction</div> : null}
-              {options.upgrade ? <div className="badge">Ready for an Upgrade</div> : null}
-              {options.other ? <div className="badge">{options.otherText || 'Other (Not specified)'}</div> : null}
-            </div>
-            <input type="submit" value='Submit'/>
-          </form>
+          <a id='email-btn' href='mailto:stephanie@powerstrategies.co'>Contact us!</a>
         </div>
 
       </section>
