@@ -101,6 +101,10 @@
     @media #{$mobile_large} {
       .project-links-wrapper {
         padding: 8vh;
+
+        .project-name {
+          font-size: 1.8em;
+        }
         .view-text-wrapper {
           font-size: 0.7em;
         }
