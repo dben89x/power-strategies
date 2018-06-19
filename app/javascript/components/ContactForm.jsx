@@ -27,7 +27,7 @@ export default class ContactForm extends React.Component {
 
     const {name, email} = this.state
     var options = this.props.options.filter((option)=> !!option)
-    var message = `Interested in:\n ${options.join('\n ')}`
+    var message = `Interested in:\n ${options.join(',\n ')}`
     $.post('/requests', {
       request: {
         name: name,

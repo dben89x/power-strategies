@@ -8,7 +8,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        NewRequestMailer.new_request_email(@request, 'doug@maxshermarketing.com').deliver_now
+        NewRequestMailer.new_request_email(@request, ENV['MAIL_RECIPIENT']).deliver_now
         format.json { render json: @request }
       else
         format.json { render json: @request.errors, status: :unprocessable_entity }
@@ -21,7 +21,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.update_attributes(request_params)
-        NewRequestMailer.new_request_email(@request, 'doug@maxshermarketing.com').deliver_now
+        NewRequestMailer.new_request_email(@request, ENV['MAIL_RECIPIENT']).deliver_now
 
         format.json { render json: @request }
       else
