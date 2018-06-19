@@ -127,7 +127,7 @@
           height: 10em;
           flex-direction: column;
           justify-content: center;
-          display: inline-block;
+          display: inline-flex;
           width: 30%;
           font-size: 1.5em;
           cursor: pointer;
@@ -161,6 +161,7 @@
             line-height: 1;
             font-size: 2em;
             top: 0;
+            left: 0;
             z-index: 3;
 
             &:hover {
