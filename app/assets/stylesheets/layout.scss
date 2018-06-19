@@ -97,6 +97,10 @@ p {
   font-family: 'Lora';
   font-weight: 100;
 }
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
 .action-btn {
   color: white;
