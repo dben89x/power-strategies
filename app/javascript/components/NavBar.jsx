@@ -51,7 +51,7 @@ export default class NavBar extends React.Component {
           <a href="mailto:stephanie@powerstrategies.co">contact us</a>
         </div>
       </div>
-      <nav className={`navbar navbar-fixed-top ${this.state.navClass}`}>
+      <nav className={`navbar navbar-fixed-top ${this.state.navClass}` } id='nav'>
         <div className="navbar-header">
           <a className={`nav-menu ${this.state.opened ? 'opened' : ''}`} onClick={this.menuClick}>
             <span className='lines'></span>

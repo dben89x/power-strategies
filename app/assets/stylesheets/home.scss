@@ -118,9 +118,9 @@
         height: 100%;
       }
       .options {
-        justify-content: space-between;
-        display: flex;
+        display: inline-flex;
         padding: 6em 0;
+        justify-content: space-around;
 
         .option {
           background-color: $lightGrey;
@@ -220,7 +220,7 @@
             cursor: pointer;
             color: $black;
             font-weight: 100;
-            z-index: 99;
+            z-index: 3;
             font-size: 2em;
           }
           .close-btn {
@@ -272,14 +272,20 @@
       }
     }
     @media #{$tablet_vertical} {
-      .content .options {
-        flex-direction: column;
+      .content {
+        height: 100%;
 
-        .option {
-          width: 100%;
-          margin: 2em 0;
+        .options {
+          padding: 2em 0;
+          flex-direction: column;
+
+          .option {
+            width: 100%;
+            margin: 2em 0;
+          }
         }
       }
+
     }
     @media #{$mobile_large} {
       .content  {

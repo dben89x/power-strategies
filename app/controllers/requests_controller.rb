@@ -32,6 +32,6 @@ class RequestsController < ApplicationController
 
 
   def request_params
-    params.require(:request).permit(:type, :customer_profession, :customer_geography, :customer_income, :customer_interests, :email, :name, :company_name, :phone, :message, :preference)
+    params.require(:request).permit(:email, :name, :message)
   end
 end

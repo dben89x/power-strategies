@@ -1,46 +1,31 @@
-New <%= @request.type %> Request from <%= @request.name %>
+New Request
 ===============================================
 
-<%= "#{'customer_profession'.humanize}:" %>
-<%= @request.customer_profession %>
+<b>
+Name:
+</b>
+<p>
+  <%= @request.name %>
+</p>
 <br/>
 
-
-<%= "#{'customer_geography'.humanize}:" %>
-<%= @request.customer_geography %>
+<b>
+Email:
+</b>
+<p>
+  <%= @request.email %>
+</p>
 <br/>
 
-
-<%= "#{'customer_income'.humanize}:" %>
-<%= @request.customer_income %>
+<b>
+Message:
+</b>
+<p>
+  <%= @request.message %>
+</p>
 <br/>
 
-
-<%= "#{'customer_interests'.humanize}:" %>
-<%= @request.customer_interests %>
-<br/>
-
-
-<%= "#{'email'.humanize}:" %>
-<%= @request.email %>
-<br/>
-
-
-<%= "#{'name'.humanize}:" %>
-<%= @request.name %>
-<br/>
-
-
-<%= "#{'company_name'.humanize}:" %>
-<%= @request.company_name %>
-<br/>
-
-
-<%= "#{'phone'.humanize}:" %>
-<%= @request.phone %>
-<br/>
-
-
-<%= "#{'message'.humanize}:" %>
-<%= @request.message %>
-<br/>
+<p>
+  <%= "Reply to it " %>
+  <%= link_to "here", "mailto:#{@request.email}" %>
+</p>

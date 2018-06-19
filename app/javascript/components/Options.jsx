@@ -24,6 +24,7 @@ export default class Options extends React.Component {
     e.preventDefault()
     $('.options-container').first().fadeOut(300, ()=>{
       $('#contact-form-wrapper').fadeIn(300)
+      $('html, body').animate({scrollTop: $('#survey').offset().top - $('#nav').height()})
     })
   }
   inputChange=(e)=>{

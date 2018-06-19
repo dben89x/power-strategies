@@ -1,34 +1,19 @@
 %h2
-  ="New #{@request.model_name.human.downcase}"
+  ="New Request"
 %hr
 
+%b="Name:"
+%p=@request.name
+%br
+
+%b="Email:"
+%p=@request.email
+%br
+
+%b="Message:"
+%p=@request.message
+%br
+
 %p
-  ="View it "
-  =link_to "here", rails_admin.show_path(model_name: @request.model_name.element, id: @request.id)
-
-%b="#{'customer_profession'.humanize}: #{@request.customer_profession}"
-%br
-
-%b="#{'customer_geography'.humanize}: #{@request.customer_geography}"
-%br
-
-%b="#{'customer_income'.humanize}: #{@request.customer_income}"
-%br
-
-%b="#{'customer_interests'.humanize}: #{@request.customer_interests}"
-%br
-
-%b="#{'email'.humanize}: #{@request.email}"
-%br
-
-%b="#{'name'.humanize}: #{@request.name}"
-%br
-
-%b="#{'company_name'.humanize}: #{@request.company_name}"
-%br
-
-%b="#{'phone'.humanize}: #{@request.phone}"
-%br
-
-%b="#{'message'.humanize}: #{@request.message}"
-%br
+  ="Reply to it "
+  =link_to "here", "mailto:#{@request.email}"
