@@ -2,10 +2,12 @@ class PagesController < ApplicationController
   before_action :set_services, only: [:home, :about]
 
   def home
+    @page_description = 'Power Strategies oversees the technology implementation process for a variety of technology systems, including casino management systems, financial systems, and human resources information systems.  We develop casino operations plans and logistics and support your organization during transition and growth.'
     @projects = Project.all
   end
 
   def about
+    @page_title = 'Who We Are'
     @aboutText = {
       mission: {
         paragraphs: [
@@ -28,6 +30,7 @@ class PagesController < ApplicationController
   end
 
   def services
+    @page_title = 'What We Do'
     @services = [{
         key: 1,
         title: "Casino Operations & Design",
@@ -47,12 +50,13 @@ class PagesController < ApplicationController
   end
 
   def projects
+    @page_title = 'Projects & Partners'
     @projects = Project.all
 
   end
 
   def publications
-
+    @page_title = 'Publications'
   end
 
   def contact

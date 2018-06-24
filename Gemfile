@@ -56,3 +56,6 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2018-06-24 04:34:56 -0700 by doug:
+gem "meta-tags", "~> 2.10"
